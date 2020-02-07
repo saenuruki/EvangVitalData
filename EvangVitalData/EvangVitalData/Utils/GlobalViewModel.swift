@@ -17,7 +17,13 @@ class GlobalViewModel {
 
 extension GlobalViewModel {
     
-    func getSheetData() {
-        print("API requestする")
+    func getSheetData(success: @escaping () -> Void, failure: @escaping (String) -> Void) {
+        APIRequest.getSheetData(success: { (vitals) in
+            self.vitals = vitals
+            success()
+        },
+        failure: { (error) in
+            failure(error)
+        })
     }
 }

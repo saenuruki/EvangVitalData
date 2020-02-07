@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var sheetView: UIView!
     @IBOutlet weak var examView: UIView!
     
-    var vitals: [Vital] = []
     fileprivate(set) var globalViewModel = GlobalViewModel()
 
     static func create(globalViewModel: GlobalViewModel) -> UIViewController {
@@ -29,27 +28,26 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func tapExamButton(_ sender: Any) {
-        if vitals.count == 0 {
+        if globalViewModel.vitals.count == 0 {
             AlertController.shared
             .show(title: "要求", message: "下のボタンからデータを読み込みましょう！", fromViewController: self, completion: nil)
         }
         else {
-            let viewController = ExamViewController.create(by: vitals)
-            self.navigationController?.pushViewController(viewController, animated: true)
+            let viewController = ExamViewController.create(by: globalViewModel.vitals)
+            viewController.modalTransitionStyle = .coverVertical
+            viewController.modalPresentationStyle = .overFullScreen
+            self.present(viewController, animated: true, completion: nil)
         }
     }
     
     @IBAction func tapSheetButton(_ sender: Any) {
-        APIRequest.getSheetData(success: { (vitals) in
-            print(vitals)
-            self.vitals = vitals
+        globalViewModel.getSheetData(success: {
             DispatchQueue.main.async {
                 AlertController.shared
                     .show(title: "取得成功", message: "早速確認問題を開始してみましょう！", fromViewController: self, completion: nil)
             }
         },
         failure: { (error) in
-            print(error)
             DispatchQueue.main.async {
                 AlertController.shared
                     .show(title: "取得失敗", message: error, fromViewController: self, completion: nil)

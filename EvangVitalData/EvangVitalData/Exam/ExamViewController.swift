@@ -38,7 +38,7 @@ class ExamViewController: UIViewController {
     }
     
     @IBAction func tapBackButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func tapBottomButton(_ sender: Any) {
