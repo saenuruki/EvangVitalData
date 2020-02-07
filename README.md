@@ -1,0 +1,2 @@
+# EvangVitalData
+AppStore展開中の生体データ学習アプリ
