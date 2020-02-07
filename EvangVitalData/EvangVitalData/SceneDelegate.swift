@@ -32,16 +32,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 extension SceneDelegate {
     
-    func createFirstViewController() -> UINavigationController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController() as! ViewController
-        
-        let navigationController = UINavigationController()
-        navigationController.view.backgroundColor = .white
-        let firstViewController = viewController
-        navigationController.viewControllers = [firstViewController]
-        navigationController.setNavigationBarHidden(true, animated: false)
-        return navigationController
-    }
+//    func createFirstViewController() -> UINavigationController {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = storyboard.instantiateInitialViewController() as! ViewController
+//
+//        let navigationController = UINavigationController()
+//        navigationController.view.backgroundColor = .white
+//        let firstViewController = viewController
+//        navigationController.viewControllers = [firstViewController]
+//        navigationController.setNavigationBarHidden(true, animated: false)
+//        return navigationController
+//    }
 
+    func createFirstViewController() -> UIViewController {
+        let firstViewController = MainTabBarController.create()
+        return firstViewController
+    }
 }

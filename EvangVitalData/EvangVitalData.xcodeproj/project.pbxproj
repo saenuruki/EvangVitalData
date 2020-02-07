@@ -26,6 +26,12 @@
 		BA2BC77423DF2647001243EB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA2BC77323DF2647001243EB /* Colors.xcassets */; };
 		BA2BC77823E19259001243EB /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2BC77723E19259001243EB /* Exam.swift */; };
 		BA2BC77A23E515BE001243EB /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2BC77923E515BE001243EB /* AlertController.swift */; };
+		BA644F2023ED7779009B5978 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644F1F23ED7779009B5978 /* MainTabBarController.swift */; };
+		BA644F2223ED77CC009B5978 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644F2123ED77CC009B5978 /* GlobalViewModel.swift */; };
+		BA644F2623ED78FB009B5978 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644F2523ED78FB009B5978 /* HomeViewController.swift */; };
+		BA644F2823ED7904009B5978 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA644F2723ED7904009B5978 /* Home.storyboard */; };
+		BA644F2A23ED81B7009B5978 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644F2923ED81B7009B5978 /* StudyViewController.swift */; };
+		BA644F2C23ED81F6009B5978 /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA644F2B23ED81F6009B5978 /* Study.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +77,12 @@
 		BA2BC77323DF2647001243EB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BA2BC77723E19259001243EB /* Exam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
 		BA2BC77923E515BE001243EB /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		BA644F1F23ED7779009B5978 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BA644F2123ED77CC009B5978 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
+		BA644F2523ED78FB009B5978 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BA644F2723ED7904009B5978 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BA644F2923ED81B7009B5978 /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		BA644F2B23ED81F6009B5978 /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,8 @@
 		BA2BC72823DD9866001243EB /* EvangVitalData */ = {
 			isa = PBXGroup;
 			children = (
+				BA644F2423ED78EB009B5978 /* Study */,
+				BA644F2323ED78E5009B5978 /* Home */,
 				BA2BC77023DF16C7001243EB /* Model */,
 				BA2BC75F23DDBC24001243EB /* Utils */,
 				BA2BC75923DD98C5001243EB /* Exam */,
@@ -173,6 +187,8 @@
 				BA2BC76C23DEFE8B001243EB /* Constant.swift */,
 				BA2BC76E23DF03F2001243EB /* APIRequest.swift */,
 				BA2BC77923E515BE001243EB /* AlertController.swift */,
+				BA644F1F23ED7779009B5978 /* MainTabBarController.swift */,
+				BA644F2123ED77CC009B5978 /* GlobalViewModel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -184,6 +200,24 @@
 				BA2BC77723E19259001243EB /* Exam.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BA644F2323ED78E5009B5978 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BA644F2523ED78FB009B5978 /* HomeViewController.swift */,
+				BA644F2723ED7904009B5978 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BA644F2423ED78EB009B5978 /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				BA644F2923ED81B7009B5978 /* StudyViewController.swift */,
+				BA644F2B23ED81F6009B5978 /* Study.storyboard */,
+			);
+			path = Study;
 			sourceTree = "<group>";
 		};
 		D57033267E33E6D7575A755D /* Pods */ = {
@@ -297,6 +331,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA644F2C23ED81F6009B5978 /* Study.storyboard in Resources */,
+				BA644F2823ED7904009B5978 /* Home.storyboard in Resources */,
 				BA2BC73623DD9868001243EB /* LaunchScreen.storyboard in Resources */,
 				BA2BC75B23DD98D1001243EB /* Exam.storyboard in Resources */,
 				BA2BC73323DD9868001243EB /* Assets.xcassets in Resources */,
@@ -329,14 +365,18 @@
 			files = (
 				BA2BC77A23E515BE001243EB /* AlertController.swift in Sources */,
 				BA2BC72E23DD9866001243EB /* ViewController.swift in Sources */,
+				BA644F2023ED7779009B5978 /* MainTabBarController.swift in Sources */,
 				BA2BC76B23DDC015001243EB /* ExamTableCell.swift in Sources */,
 				BA2BC76D23DEFE8B001243EB /* Constant.swift in Sources */,
+				BA644F2623ED78FB009B5978 /* HomeViewController.swift in Sources */,
 				BA2BC75D23DD98EF001243EB /* ExamViewController.swift in Sources */,
 				BA2BC77223DF16DA001243EB /* Vital.swift in Sources */,
 				BA2BC72A23DD9866001243EB /* AppDelegate.swift in Sources */,
 				BA2BC76723DDBFF8001243EB /* ExamViewModel.swift in Sources */,
+				BA644F2A23ED81B7009B5978 /* StudyViewController.swift in Sources */,
 				BA2BC77823E19259001243EB /* Exam.swift in Sources */,
 				BA2BC72C23DD9866001243EB /* SceneDelegate.swift in Sources */,
+				BA644F2223ED77CC009B5978 /* GlobalViewModel.swift in Sources */,
 				BA2BC76F23DF03F3001243EB /* APIRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
