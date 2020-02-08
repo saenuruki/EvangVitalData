@@ -30,6 +30,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         tabBar.isTranslucent = false
+        tabBar.tintColor = .green
         self.delegate = self
         setViewControllers(createViewControllers(), animated: true)
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -55,9 +56,9 @@ class MainTabBarController: UITabBarController {
     }
 
     fileprivate func createTabBarItem(tabData: Tab) -> UITabBarItem {
-        let tabBarItem = UITabBarItem(title: "", image: tabData.defaultImge?.withRenderingMode(.alwaysOriginal), selectedImage: tabData.focusImage?.withRenderingMode(.alwaysOriginal))
-        tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-
+        let tabBarItem = UITabBarItem(title: tabData.title, image: tabData.defaultImge?.withRenderingMode(.alwaysOriginal), selectedImage: tabData.focusImage?.withRenderingMode(.alwaysOriginal))
+        tabBarItem.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
         return tabBarItem
     }
 
@@ -65,9 +66,9 @@ class MainTabBarController: UITabBarController {
 
         switch tabType {
         case .exam:
-            return (UIImage(), UIImage(), tabType.rawValue)
+            return (UIImage(named: "icon_exam_white"), UIImage(named: "icon_exam_color"), tabType.rawValue)
         case .study:
-            return (UIImage(), UIImage(), tabType.rawValue)
+            return (UIImage(named: "icon_study_white"), UIImage(named: "icon_study_color"), tabType.rawValue)
         }
     }
 

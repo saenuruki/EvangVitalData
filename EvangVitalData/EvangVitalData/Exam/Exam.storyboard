@@ -68,12 +68,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYn-bE-3c2">
-                                        <rect key="frame" x="8" y="55" width="44" height="44"/>
+                                        <rect key="frame" x="362" y="55" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="GL1-un-tKc"/>
                                             <constraint firstAttribute="width" constant="44" id="btr-So-WYA"/>
                                         </constraints>
-                                        <state key="normal" image="btn_navi_back"/>
+                                        <state key="normal" image="icon_close"/>
                                         <connections>
                                             <action selector="tapBackButton:" destination="enS-Pn-C1f" eventType="touchUpInside" id="jNt-Bn-5Ba"/>
                                         </connections>
@@ -89,8 +89,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="7F3-5C-Vw0"/>
+                                    <constraint firstAttribute="trailing" secondItem="bYn-bE-3c2" secondAttribute="trailing" constant="8" id="Bpw-XM-smg"/>
                                     <constraint firstAttribute="bottom" secondItem="bYn-bE-3c2" secondAttribute="bottom" constant="8" id="BuQ-5h-7qC"/>
-                                    <constraint firstItem="bYn-bE-3c2" firstAttribute="leading" secondItem="iPF-H5-asc" secondAttribute="leading" constant="8" id="C0C-2l-t3m"/>
                                     <constraint firstAttribute="trailing" secondItem="lba-vV-sO6" secondAttribute="trailing" id="M3U-eq-1ML"/>
                                     <constraint firstItem="DcX-g2-38S" firstAttribute="centerX" secondItem="iPF-H5-asc" secondAttribute="centerX" id="bkH-VX-Gsl"/>
                                     <constraint firstAttribute="bottom" secondItem="lba-vV-sO6" secondAttribute="bottom" id="cZI-va-mFr"/>
@@ -129,7 +129,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_navi_back" width="24" height="24"/>
+        <image name="icon_close" width="26" height="26"/>
         <namedColor name="background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
