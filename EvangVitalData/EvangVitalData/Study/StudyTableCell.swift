@@ -11,7 +11,7 @@ import UIKit
 class StudyTableCell: UITableViewCell {
     
     static func calcCellHeight(with vital: Vital) -> CGFloat {
-        let viewMargin: CGFloat = 84
+        let viewMargin: CGFloat = 96
         let nameLabelHeight = calcLabelHeight(with: vital.name, isTitle: true)
         let nameJPLabelHeight = calcLabelHeight(with: vital.nameJP, isTitle: true)
         let descriptionLabelHeight = calcLabelHeight(with: vital.description, isTitle: false)
@@ -25,13 +25,15 @@ class StudyTableCell: UITableViewCell {
         label.text = text
         
         if isTitle {
-            label.font =  UIFont(name: "HiraMaruProN-W4", size: 17.0)
+            label.font =  .systemFont(ofSize: 17.0)
+//            label.font =  UIFont(name: "HiraMaruProN-W4", size: 17.0)
             let labelWidth = UIScreen.main.bounds.width - 48
             let rect: CGSize = label.sizeThatFits(CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude))
             return rect.height
         }
         else {
-            label.font =  UIFont(name: "HiraMaruProN-W4", size: 14.0)
+            label.font =  .systemFont(ofSize: 14.0)
+//            label.font =  UIFont(name: "HiraMaruProN-W4", size: 14.0)
             let labelWidth = UIScreen.main.bounds.width - 100
             let rect: CGSize = label.sizeThatFits(CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude))
             return rect.height
@@ -81,6 +83,10 @@ fileprivate extension StudyTableCell {
         nameJPHeightConstraint.constant = calcLabelHeight(with: vital.nameJP, isTitle: true)
         descriptionViewHeightConstraint.constant = calcLabelHeight(with: vital.description, isTitle: false)
         usageHeightConstraint.constant = calcLabelHeight(with: vital.usage, isTitle: false)
+        
+        print("name: \(calcLabelHeight(with: vital.name, isTitle: true))")
+        print("description: \(calcLabelHeight(with: vital.description, isTitle: true))")
+        print("usage: \(calcLabelHeight(with: vital.usage, isTitle: true))")
     }
     
     func calcLabelHeight(with text: String, isTitle: Bool) -> CGFloat {
@@ -89,13 +95,15 @@ fileprivate extension StudyTableCell {
         label.text = text
         
         if isTitle {
-            label.font =  UIFont(name: "HiraMaruProN-W4", size: 17.0)
+            label.font =  .systemFont(ofSize: 17.0)
+//            label.font =  UIFont(name: "HiraMaruProN-W4", size: 17.0)
             let labelWidth = UIScreen.main.bounds.width - 48
             let rect: CGSize = label.sizeThatFits(CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude))
             return rect.height
         }
         else {
-            label.font =  UIFont(name: "HiraMaruProN-W4", size: 14.0)
+            label.font =  .systemFont(ofSize: 14.0)
+//            label.font =  UIFont(name: "HiraMaruProN-W4", size: 14.0)
             let labelWidth = UIScreen.main.bounds.width - 100
             let rect: CGSize = label.sizeThatFits(CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude))
             return rect.height

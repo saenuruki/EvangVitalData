@@ -129,7 +129,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_close" width="26" height="26"/>
+        <image name="icon_close" width="20" height="20"/>
         <namedColor name="background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

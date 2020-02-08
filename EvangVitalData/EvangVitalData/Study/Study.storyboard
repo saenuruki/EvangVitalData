@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,17 +11,149 @@
         <!--Study View Controller-->
         <scene sceneID="gK0-an-OJz">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="xHU-Am-4S2" customClass="StudyViewController" customModule="EvangVitalData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Study" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xHU-Am-4S2" customClass="StudyViewController" customModule="EvangVitalData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1hH-JB-lRf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aj3-AZ-bWX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihh-EE-nAE">
+                                        <rect key="frame" x="0.0" y="106.5" width="414" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="JgD-Ga-5vT"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用語帳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb8-pT-WHM">
+                                        <rect key="frame" x="181.5" y="66.5" width="51" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Oc2-Xe-XYE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                        <color key="textColor" name="text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzG-pg-KRe">
+                                        <rect key="frame" x="362" y="54.5" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="4tk-vU-IBo"/>
+                                            <constraint firstAttribute="height" constant="44" id="Cny-JH-abR"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_shuffle"/>
+                                        <connections>
+                                            <action selector="tapShuffleButton:" destination="xHU-Am-4S2" eventType="touchUpInside" id="O4n-Fd-2EL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="background"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ihh-EE-nAE" secondAttribute="bottom" id="2Wr-zO-UUD"/>
+                                    <constraint firstItem="Eb8-pT-WHM" firstAttribute="centerX" secondItem="aj3-AZ-bWX" secondAttribute="centerX" id="5Fe-w0-c0a"/>
+                                    <constraint firstItem="ihh-EE-nAE" firstAttribute="top" secondItem="xzG-pg-KRe" secondAttribute="bottom" constant="8" id="5as-OT-3Yv"/>
+                                    <constraint firstItem="ihh-EE-nAE" firstAttribute="leading" secondItem="aj3-AZ-bWX" secondAttribute="leading" id="5mK-VB-lb8"/>
+                                    <constraint firstAttribute="height" constant="107" id="HRH-mb-8Zm"/>
+                                    <constraint firstAttribute="trailing" secondItem="ihh-EE-nAE" secondAttribute="trailing" id="O9u-Ga-Qbx"/>
+                                    <constraint firstItem="xzG-pg-KRe" firstAttribute="centerY" secondItem="Eb8-pT-WHM" secondAttribute="centerY" id="eTp-Vc-E7S"/>
+                                    <constraint firstAttribute="trailing" secondItem="xzG-pg-KRe" secondAttribute="trailing" constant="8" id="pZG-nX-edm"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kjm-Fh-0b2">
+                                <rect key="frame" x="0.0" y="107" width="414" height="755"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xHU-Am-4S2" id="lmY-qF-2MO"/>
+                                    <outlet property="delegate" destination="xHU-Am-4S2" id="FCU-uP-l0a"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用語データがありません。データを読み込んでください。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3e-3G-Vsa">
+                                <rect key="frame" x="12" y="322" width="390" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="oHA-jA-eaW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                                <color key="textColor" name="text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edm-61-KsP">
+                                <rect key="frame" x="32" y="462" width="350" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="データを読み込む" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD2-PP-v3B">
+                                        <rect key="frame" x="89" y="16" width="192" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="t12-Ia-CCG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                                        <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_sheet" translatesAutoresizingMaskIntoConstraints="NO" id="tet-KY-3R6">
+                                        <rect key="frame" x="49" y="14" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="oLB-Yf-5gb"/>
+                                            <constraint firstAttribute="height" constant="32" id="qAr-ed-h1J"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se2-a9-yB6">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                        <connections>
+                                            <action selector="tapSheetButton:" destination="xHU-Am-4S2" eventType="touchUpInside" id="zVN-5L-jMx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="fD2-PP-v3B" firstAttribute="centerX" secondItem="Edm-61-KsP" secondAttribute="centerX" constant="10" id="7h8-Sd-cvr"/>
+                                    <constraint firstItem="se2-a9-yB6" firstAttribute="leading" secondItem="Edm-61-KsP" secondAttribute="leading" id="8CU-kT-aR5"/>
+                                    <constraint firstAttribute="height" constant="60" id="DDJ-7n-XnH"/>
+                                    <constraint firstAttribute="trailing" secondItem="se2-a9-yB6" secondAttribute="trailing" id="MiM-78-H9z"/>
+                                    <constraint firstItem="fD2-PP-v3B" firstAttribute="leading" secondItem="tet-KY-3R6" secondAttribute="trailing" constant="8" id="OYu-NG-o8u"/>
+                                    <constraint firstItem="fD2-PP-v3B" firstAttribute="centerY" secondItem="Edm-61-KsP" secondAttribute="centerY" id="aLd-rO-sqh"/>
+                                    <constraint firstAttribute="bottom" secondItem="se2-a9-yB6" secondAttribute="bottom" id="cwV-4j-lbJ"/>
+                                    <constraint firstItem="fD2-PP-v3B" firstAttribute="centerY" secondItem="tet-KY-3R6" secondAttribute="centerY" id="fCg-xz-CGI"/>
+                                    <constraint firstItem="se2-a9-yB6" firstAttribute="top" secondItem="Edm-61-KsP" secondAttribute="top" id="fv6-uZ-Got"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="zRY-4b-2tb" firstAttribute="trailing" secondItem="Edm-61-KsP" secondAttribute="trailing" constant="32" id="0mi-BE-eHs"/>
+                            <constraint firstItem="Kjm-Fh-0b2" firstAttribute="top" secondItem="aj3-AZ-bWX" secondAttribute="bottom" id="0ug-If-qtl"/>
+                            <constraint firstItem="zRY-4b-2tb" firstAttribute="bottom" secondItem="Kjm-Fh-0b2" secondAttribute="bottom" id="Iyg-dR-4MH"/>
+                            <constraint firstItem="zRY-4b-2tb" firstAttribute="trailing" secondItem="Kjm-Fh-0b2" secondAttribute="trailing" id="TF3-5o-oZ3"/>
+                            <constraint firstItem="Edm-61-KsP" firstAttribute="centerY" secondItem="1hH-JB-lRf" secondAttribute="centerY" constant="44" id="b1h-Kv-zhZ"/>
+                            <constraint firstItem="Edm-61-KsP" firstAttribute="top" secondItem="o3e-3G-Vsa" secondAttribute="bottom" constant="48" id="b5x-Ns-ThP"/>
+                            <constraint firstItem="zRY-4b-2tb" firstAttribute="trailing" secondItem="o3e-3G-Vsa" secondAttribute="trailing" constant="12" id="cVD-PB-CRS"/>
+                            <constraint firstItem="aj3-AZ-bWX" firstAttribute="trailing" secondItem="zRY-4b-2tb" secondAttribute="trailing" id="eM1-MI-huY"/>
+                            <constraint firstItem="o3e-3G-Vsa" firstAttribute="leading" secondItem="zRY-4b-2tb" secondAttribute="leading" constant="12" id="l6A-ds-vQS"/>
+                            <constraint firstItem="aj3-AZ-bWX" firstAttribute="top" secondItem="1hH-JB-lRf" secondAttribute="top" id="nNM-Ie-wAX"/>
+                            <constraint firstItem="Edm-61-KsP" firstAttribute="leading" secondItem="zRY-4b-2tb" secondAttribute="leading" constant="32" id="oE2-7r-VhB"/>
+                            <constraint firstItem="aj3-AZ-bWX" firstAttribute="leading" secondItem="zRY-4b-2tb" secondAttribute="leading" id="q3q-nJ-6Ih"/>
+                            <constraint firstItem="Kjm-Fh-0b2" firstAttribute="leading" secondItem="zRY-4b-2tb" secondAttribute="leading" id="xiE-UP-U85"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zRY-4b-2tb"/>
                     </view>
+                    <connections>
+                        <outlet property="headerViewHeightConstraint" destination="HRH-mb-8Zm" id="mnc-HI-vbJ"/>
+                        <outlet property="sheetView" destination="Edm-61-KsP" id="4pe-uB-1DA"/>
+                        <outlet property="tableView" destination="Kjm-Fh-0b2" id="tZg-3M-joX"/>
+                        <outlet property="titleLabel" destination="o3e-3G-Vsa" id="nFD-iG-f5F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULc-2l-3zX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="127"/>
+            <point key="canvasLocation" x="155.07246376811597" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_sheet" width="32" height="32"/>
+        <image name="icon_shuffle" width="22" height="22"/>
+        <namedColor name="background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

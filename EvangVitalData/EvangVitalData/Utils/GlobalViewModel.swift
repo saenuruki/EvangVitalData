@@ -26,4 +26,9 @@ extension GlobalViewModel {
             failure(error)
         })
     }
+    
+    func shuffleData() {
+        let shuffledVitals = vitals.shuffled()
+        self.vitals = shuffledVitals
+    }
 }
