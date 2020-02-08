@@ -32,6 +32,8 @@
 		BA644F2823ED7904009B5978 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA644F2723ED7904009B5978 /* Home.storyboard */; };
 		BA644F2A23ED81B7009B5978 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644F2923ED81B7009B5978 /* StudyViewController.swift */; };
 		BA644F2C23ED81F6009B5978 /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA644F2B23ED81F6009B5978 /* Study.storyboard */; };
+		BA644F2E23EECAB7009B5978 /* StudyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA644F2D23EECAB7009B5978 /* StudyTableCell.xib */; };
+		BA644F3023EECAC6009B5978 /* StudyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA644F2F23EECAC6009B5978 /* StudyTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		BA644F2723ED7904009B5978 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BA644F2923ED81B7009B5978 /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
 		BA644F2B23ED81F6009B5978 /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
+		BA644F2D23EECAB7009B5978 /* StudyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyTableCell.xib; sourceTree = "<group>"; };
+		BA644F2F23EECAC6009B5978 /* StudyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +220,8 @@
 			children = (
 				BA644F2923ED81B7009B5978 /* StudyViewController.swift */,
 				BA644F2B23ED81F6009B5978 /* Study.storyboard */,
+				BA644F2D23EECAB7009B5978 /* StudyTableCell.xib */,
+				BA644F2F23EECAC6009B5978 /* StudyTableCell.swift */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 			files = (
 				BA644F2C23ED81F6009B5978 /* Study.storyboard in Resources */,
 				BA644F2823ED7904009B5978 /* Home.storyboard in Resources */,
+				BA644F2E23EECAB7009B5978 /* StudyTableCell.xib in Resources */,
 				BA2BC73623DD9868001243EB /* LaunchScreen.storyboard in Resources */,
 				BA2BC75B23DD98D1001243EB /* Exam.storyboard in Resources */,
 				BA2BC73323DD9868001243EB /* Assets.xcassets in Resources */,
@@ -363,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA644F3023EECAC6009B5978 /* StudyTableCell.swift in Sources */,
 				BA2BC77A23E515BE001243EB /* AlertController.swift in Sources */,
 				BA2BC72E23DD9866001243EB /* ViewController.swift in Sources */,
 				BA644F2023ED7779009B5978 /* MainTabBarController.swift in Sources */,
