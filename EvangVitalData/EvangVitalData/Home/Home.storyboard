@@ -88,7 +88,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="background"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7l6-OX-xzT"/>
                                     <constraint firstItem="wMe-Ml-luX" firstAttribute="centerY" secondItem="AXD-BR-h2Z" secondAttribute="centerY" id="AQb-5g-Gh5"/>
@@ -102,7 +102,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="YW8-Wg-aGv" firstAttribute="leading" secondItem="lZS-iQ-doX" secondAttribute="leading" constant="32" id="0Ok-rO-YJT"/>
                             <constraint firstItem="AXD-BR-h2Z" firstAttribute="top" secondItem="YW8-Wg-aGv" secondAttribute="bottom" constant="64" id="89h-7C-tj9"/>
@@ -131,6 +131,9 @@
     <resources>
         <image name="icon_sheet" width="32" height="32"/>
         <image name="image_background" width="184" height="184"/>
+        <namedColor name="background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="text">
             <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

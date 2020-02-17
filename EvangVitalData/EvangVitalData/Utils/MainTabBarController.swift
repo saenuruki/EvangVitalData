@@ -32,6 +32,10 @@ class MainTabBarController: UITabBarController {
         tabBar.isTranslucent = false
         tabBar.tintColor = .green
         self.delegate = self
+        self.view.backgroundColor = UIColor(named: "background")
+        tabBar.backgroundColor = UIColor(named: "background")
+        tabBar.barTintColor = UIColor(named: "background")
+        
         setViewControllers(createViewControllers(), animated: true)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -74,7 +78,7 @@ class MainTabBarController: UITabBarController {
 
     func createFirstViewController(_ viewController: UIViewController) -> UINavigationController {
         let navigationController = UINavigationController()
-        navigationController.view.backgroundColor = .white
+        navigationController.view.backgroundColor = UIColor(named: "background")
         let firstViewController = viewController
         navigationController.viewControllers = [firstViewController]
         navigationController.setNavigationBarHidden(true, animated: false)

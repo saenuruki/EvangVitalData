@@ -61,7 +61,8 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kjm-Fh-0b2">
                                 <rect key="frame" x="0.0" y="107" width="414" height="755"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="background"/>
+                                <color key="sectionIndexBackgroundColor" name="background"/>
                                 <connections>
                                     <outlet property="dataSource" destination="xHU-Am-4S2" id="lmY-qF-2MO"/>
                                     <outlet property="delegate" destination="xHU-Am-4S2" id="FCU-uP-l0a"/>
@@ -102,7 +103,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="background"/>
                                 <constraints>
                                     <constraint firstItem="fD2-PP-v3B" firstAttribute="centerX" secondItem="Edm-61-KsP" secondAttribute="centerX" constant="10" id="7h8-Sd-cvr"/>
                                     <constraint firstItem="se2-a9-yB6" firstAttribute="leading" secondItem="Edm-61-KsP" secondAttribute="leading" id="8CU-kT-aR5"/>

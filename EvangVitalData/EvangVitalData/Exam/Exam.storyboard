@@ -86,7 +86,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="background"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="7F3-5C-Vw0"/>
                                     <constraint firstAttribute="trailing" secondItem="bYn-bE-3c2" secondAttribute="trailing" constant="8" id="Bpw-XM-smg"/>
